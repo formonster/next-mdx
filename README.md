@@ -1,34 +1,71 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 前言
 
-## Getting Started
+本示例主要用于调研 mdx 语法的使用，和 remark、rehype、codehike 等插件的使用。
 
-First, run the development server:
+## nextjs 支持 mdx
 
-```bash
-npm run dev
-# or
-yarn dev
+参考：https://www.mdxjs.cn/getting-started/next
+
+## 如何自定义组件
+
+参考：https://mdxjs.com/packages/react/
+
+```md
+<!-- doc.mdx -->
+# Hello MDX
+
+<Ding />
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+```tsx
+import type { NextPage } from 'next'
+import Post from './doc.mdx'
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+const components = {
+  Ding: (props: any) => <button {...props}>Ding</button>
+}
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+const MDX: NextPage = function MDX() {
+  return (
+    <Post components={components} />
+  )
+}
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+export default MDX;
+```
 
-## Learn More
+## Tailwindcss
 
-To learn more about Next.js, take a look at the following resources:
+参考：https://www.tailwindcss.cn/docs/guides/nextjs
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## codehike 使用
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+参考：https://codehike.org/docs/installation
 
-## Deploy on Vercel
+### codehike 代码焦点使用示例
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+参考：https://codehike.org/demo/code
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+### codehike 注释示例
+
+参考：https://codehike.org/demo/meta-annotations
+
+### 通过 // 来使用代码焦点和注释
+
+参考：https://codehike.org/demo/comment-annotations
+
+### codehike 文件名示例
+
+参考：https://codehike.org/demo/filenames
+
+### 带步骤的动态代码演示
+
+参考：https://codehike.org/demo/spotlight
+
+### 幻灯片演示（收费）
+
+参考：https://codehike.org/demo/slideshow
+
+### 更多
+
+参考：https://codehike.org/docs/ch-slideshow
