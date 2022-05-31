@@ -1,0 +1,85 @@
+.rotateWarp {
+  position: relative;
+  width: max-content;
+  transition: box-shadow .3s;
+}
+.rotateWarp:hover {
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, .3);
+}
+.rotateBar {
+  position: absolute;
+  left: 50%;
+  border-radius: 50%;
+  font-size: 25px;
+  color: rgba(0, 0, 0, .3);
+  transform: translate(-50%, -110%);
+}
+.sizeWrap {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.sizeWrap_top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  cursor: n-resize;
+}
+.sizeWrap_bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  cursor: s-resize;
+}
+.sizeWrap_left {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 5px;
+  height: 100%;
+  cursor: w-resize;
+}
+.sizeWrap_right {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 5px;
+  height: 100%;
+  cursor: e-resize;
+}
+.sizeWrap_topLeft {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 5px;
+  height: 5px;
+  cursor: nw-resize;
+}
+.sizeWrap_topRight {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 5px;
+  height: 5px;
+  cursor: ne-resize;
+}
+.sizeWrap_bottomLeft {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 5px;
+  height: 5px;
+  cursor: sw-resize;
+}
+.sizeWrap_bottomRight {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 5px;
+  height: 5px;
+  cursor: se-resize;
+}

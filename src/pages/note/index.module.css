@@ -1,0 +1,11 @@
+.noteBg {
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(90deg,rgba(233, 233, 233, 0.5) 10%,transparent 0),
+          linear-gradient(rgba(233, 233, 233,.5) 10%,transparent 0);
+  background-size: 20px 20px;
+}
+
+.noteItem {
+  position: absolute;
+}
